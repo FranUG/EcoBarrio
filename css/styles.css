@@ -1,0 +1,374 @@
+﻿/*
+Paleta de colores
+
+#00662C;  verde oscuro
+#B9D9B9;  verde
+#000000;  negro
+#FFFFFF;  blanco
+*/
+
+/******************** GENÉRICO ************************/
+/* Estilos genéricos */
+body {
+    font-family: Arial, sans-serif; 
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+	font-size : 18px;
+}
+
+h1{
+	padding : 15px;
+}
+h2{
+   margin: 40px;
+   font-size: 40px;
+}
+p{
+	margin:10px;
+}
+
+a:hover {
+	color: #333;
+}
+
+/**************************************************************
+ HE CREADO CLASES GENÉRICAS PARA NO SOBRECARGAR CADA CLASE O ID
+***************************************************************/
+.centrar_texto{       /* Para centrar el texto de cualquier elemento */
+  text-align: center;
+}
+.derecha_texto{      /* Para alinear el texto a la derecha de cualquier elemento */
+  text-align: right;
+}
+.izquierda_texto{      /* Para alinear el texto a la derecha de cualquier elemento */
+  text-align: left;
+}
+.texto_blanco{       /* Para textos blancos */
+  color: #ffffff;
+}
+.texto_negro{       /* Para textos negros */
+  color:#0c0c0d;
+}
+.texto_verde{       /* Para textos verde claro */
+  color:#B9D9B9;
+}
+
+.texto_verde_oscuro{ /* Para textos verde oscuro */
+  color:#00662C;
+}
+
+.texto_bold{        /* Para textos bold */
+  font-weight: bold;
+}
+#texto_icono_web{
+font-size : 40px;
+}
+.texto_40{
+    font-size : 40px;
+}
+.fondo_verde_claro{ /* Para los fondos verdes */  
+  background-color:  #B9D9B9;
+}
+.fondo_negro{      /* Para los fondos blancos */
+	background-color: #000000;
+}
+
+
+/************************ HEADER **********************************/
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;     /*centrado vertical de los items del div*/
+  background-color: #ffffff;
+  padding: 20px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+header div{
+  flex-grow: 1; /* Distribuye todo el espacio disponible */
+}
+
+.div_icono_pagina{
+  display: flex;
+  align-items:center;
+}
+
+/* Menú */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;     /*centrado vertical de los items del div*/
+  padding: 0px;
+}
+ nav div{
+   display: flex;
+   align-items: center;     /*centrado vertical de los items del div*/
+   justify-content: center;
+   flex-grow: 1; /* Distribuye todo el espacio disponible */
+ }
+
+nav ul {
+   display: flex;
+   align-items: center;     /*centrado vertical de los items del div*/
+   justify-content: center;
+   list-style: none;   
+   margin: 0;
+   padding: 0;
+}
+
+nav ul li {
+    margin: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+	color: #000;
+}
+
+#menu_hamburguesa ul{
+  display: flex;
+  flex-direction: column;
+  position: fixed; /*posiciono en la esquina superior derecha*/
+  top: 0;
+  right: 0;
+  margin: 20px;
+  padding: 0;
+}
+
+#menu_hamburguesa li {
+  width: 100%;
+  display: block;
+  background: lightgrey;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid grey;
+}
+
+/************************ CUERPO DE LA PÁGINA **********************************/
+.container { /*Contenedor generico. No establecemos dimensiones para que el contenido fluya*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.producto {
+  width:260px;   
+  background-color: #fff;
+  padding: 10px;
+  margin: 30px;
+  border-width:4px;
+  border-radius: 20px;
+  border-style : solid;
+  border-color:#B9D9B9;
+}
+
+.boton{                    /*Generica para todos los botones. Ajusto el ancho con otra clase*/
+  display: flex;
+  align-items: center;     /*centrado vertical de los items del div*/
+  justify-content: center; /*centrado horizontal de los items del div*/
+  height:50px;      /* Alto 40 px */
+  margin: auto; /* Establecemos margen */
+  font-size: 24px;  /* Tamaño de fuento a 18 px*/
+  background-color: #000;
+  border-width:1px;
+  border-radius: 10px;
+  border-style : solid;
+}
+.boton a{
+	text-decoration: none;
+	color: #fff;
+	padding: 10px;
+}
+
+.boton:hover{
+   background-color: #B9D9B9;
+
+}
+.boton:hover a{
+   color: #000;
+}
+
+.boton_producto{
+  width:100%;  
+}
+
+.boton_hazte_socio{ 
+  width: 100%; 
+  margin: 20px; /* Establecemos margen */
+}
+.hazte_socio {
+  display: flex;
+  flex-flow: column;
+  align-items: center;     /*centrado vertical de los items del div*/
+  justify-content: center; /*centrado horizontal de los items del div*/
+  padding: 15px 30px;
+  margin: 15px 30px;
+ font-size : 18px;
+}
+
+#menu_hazte_socio{ 
+ font-size : 14px;
+}
+
+#menu_hazte_socio a{ 
+  color :#000;
+}
+
+#menu_hazte_socio a:hover{ 
+  color :#333;
+}
+.seccion_bienvenida_pagina_principal
+{
+  display: flex;
+  align-items: center;     /*centrado vertical de los items del div*/
+  justify-content: left;    /*centrado horizontal de los items del div*/
+  font-size : 14px;
+  padding : 5px 20px;
+}
+
+.seccion_filtrar_productos
+{
+  display: flex;
+  font-size : 24px;
+  padding : 20px 20px;
+  margin: 50px;
+  align-items: center;     /*centrado vertical de los items del div*/
+  border-bottom: 3px solid;
+}
+
+.div_filtrar_productos{
+   width: 370px; 
+   background-color: #000;
+   padding: 3px;
+   margin-left: 100px;
+}
+
+.fondo_imagen_horizontal_pagina_index
+{
+  display: flex;
+  align-items: center;     /*centrado vertical de los items del div*/
+  justify-content: center; /*centrado horizontal de los items del div*/ 
+  height: 400px;
+  width: 1200px;
+  background-position: 10% 50%;                        /* La imagen es mas grande que el div así que ajusto lo que quiero que se muestre */ 
+  background-image: url("../images/imagen_index.jpg"); /* Añado imagen al fondo */
+}
+
+.fondo_imagen_horizontal
+{
+  height: 150px;
+  width: 1200px;
+  background-image: url("../images/verduras.jpg"); /* Añado imagen al fondo */
+}
+
+
+.img_redondeada{         
+  border-radius: 50%;       /* Radio del borde hasta que parezca redonda */
+  border: 2px solid #fff;
+}
+
+/************************SIDEBAR***********************************/
+.sidebar {
+  width: 350px; 
+  padding: 20px; 
+  float: right;
+}
+
+
+/************************ FOOTER **********************************/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;     /*centrado vertical de los items del div*/	
+  padding: 20px; 
+}
+
+footer div{
+  flex-grow: 1; /* Distribuye todo el espacio disponible */
+}
+
+/***********************FORMULARIOS*******************************/
+#columna_principal{  /* Id para el formulario de contacto */
+  width: 100%;  
+  margin-top:20px;     /* Margen 20px */
+  flex-grow: 1;
+  padding: 20px; /* Espacio interno del div principal */
+}
+
+#campo_busqueda{
+  width: 90%;  
+  background-color: #000;     /*Establecemos color de fondo */
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;     /*centrado vertical de los items del div*/	
+}
+#campo_busqueda input{
+  color: #fff;
+}
+
+input, select, textarea, button{     /* Establecemos párametros de los input, select y text_area*/
+  width: 100%;              /* Ancho 680px */
+  height:40px;               /* Alto 40 px */
+  margin: 5px 0px;           /* Establecemos margen vertical a 5px y horizontal a cero */
+  border: solid 2px #000;    /* Borde negro*/
+  border-radius: 20px;       /* Redondeamos los bordes de estos elementos */   
+  background-color: #eeeeee; /*Establecemos color de fondo */
+}
+
+
+textarea{
+  height: 200px; /* Establecemos altura del textarea */
+}
+
+/************************MENU HAMBURGUESA*************************/
+#boton_menu_hamburguesa{
+   display: none;
+}
+
+/**************************MEDIA QUERY****************************/
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 800px) {
+    body {
+        margin: 0px;
+        padding: 0;
+    }
+
+	#boton_menu_hamburguesa{
+        display:block;
+    }
+
+
+	#texto_icono_web{ /*ocultamos texto del icono de la página*/
+	   display:none;
+	}
+
+	#menu_hazte_socio{ /*Ocultamos menú superior de hazte socio, quienes somos...*/
+	    display:none;
+	}
+
+    nav {            /*Ocultamos menú secciones*/
+		display: none; 
+    }
+
+
+    footer {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+
+	.sidebar{
+		display: none; 
+	}
+}
+
+
